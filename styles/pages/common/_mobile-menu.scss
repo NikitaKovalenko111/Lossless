@@ -1,0 +1,42 @@
+.mobile-menu {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 30px;
+
+    &--active {
+        display: block;
+    }
+
+    &__close-button {
+        @include reset-button;
+        position: absolute;
+        right: 30px;
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 56px;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 104px;
+    }
+
+    &__nav-list-item {
+        text-align: center;
+        font-size: 18px;
+
+        &--active {
+            font-weight: 700;
+        }
+    }
+}

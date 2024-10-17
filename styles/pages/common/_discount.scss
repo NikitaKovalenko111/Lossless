@@ -1,0 +1,58 @@
+.discount {
+    @include ipad {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    @include mobile {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 24px;
+        border: solid var(--color-light-green) 2px;
+        border-radius: var(--border-radius);
+        padding: 61px 0 74px 0;
+    }
+
+    &__header {
+        color: black;
+        font-size: 40px;
+        text-align: center;
+        line-height: 39px;
+        word-wrap: break-word;
+        width: 957px;
+
+        @include ipad {
+            width: 515px;
+            font-size: 32px;
+        }
+
+        @include mobile {
+            font-size: 18px;
+            line-height: 22px;
+            width: 250px;
+        }
+    }
+
+    &__desc {
+        word-wrap: break-word;
+        font-size: 24px;
+        width: 638px;
+        text-align: center;
+        color: black;
+        line-height: 29px;
+        margin-bottom: 14px;
+
+        @include mobile {
+            font-size: 16px;
+            width: 292px;
+            line-height: 20px;
+        }
+    }
+}

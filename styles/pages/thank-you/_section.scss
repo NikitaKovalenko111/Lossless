@@ -1,0 +1,11 @@
+.section {
+    padding: 40px 0;
+
+    @include ipad {
+        padding: 28px 0;
+    }
+
+    @include mobile {
+        padding: 20px 0;
+    }
+}

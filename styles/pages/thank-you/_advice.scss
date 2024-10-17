@@ -1,0 +1,109 @@
+.advice {
+    margin-bottom: 144px;
+    @include mobile {
+        margin-bottom: 104px;
+    }
+
+    @include ipad {
+        margin-bottom: 104px;
+    }
+
+    &__header {
+        text-align: center;
+        margin-bottom: 56px;
+
+        @include ipad {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        @include mobile {
+            font-size: 24px;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        gap: 24px;
+        justify-content: space-between;
+
+        @include ipad {
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+    }
+
+    &__item-pic-wrapper {
+        background-color: var(--color-gray);
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+    }
+
+    &__item-pic {
+        border-radius: var(--border-radius);
+    }
+
+    &__item-text {
+        line-height: 20px;
+    }
+
+    &__back-link {
+        margin-top: 50px;
+        display: block;
+        color: var(--color-dark-green);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &::before {
+            content: "";
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            background-image: url('./../../../images/left-arrow-link.svg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @include hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__item {
+        max-width: 517px;
+        width: 100%;
+        height: 526px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--color-dark-gray);
+        background-color: var(--color-gray);
+
+        @include mobile {
+            height: 485px;
+        }
+    }
+
+    &__item-header {
+        margin-top: 15px;
+    }
+
+    &__item-content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        padding: 0 35px 0 24px;
+    }
+}

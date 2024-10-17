@@ -1,0 +1,88 @@
+.header {
+    padding: 32px 0;
+
+    &__logo {
+        img {
+            @include mobile {
+                width: 112px;
+                height: 40px;
+            }
+    
+            @include ipad {
+                width: 131px;
+                height: 48px;
+            };
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 252px;
+
+        @include mobile {
+            gap: 0;
+            justify-content: center;
+        };
+
+        @include ipad {
+            gap: 45px;
+        }
+    }
+
+    &__nav {
+        display: block;
+
+        @include ipad {
+            display: none;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__nav-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 62px;
+
+        @include ipad {
+            gap: 32px
+        }
+    }
+
+    &__nav-list-item {
+        display: flex;
+        justify-content: center;
+        height: 20px;
+        width: fit-content;
+
+        &:hover {
+            text-shadow: 0 0 .9px #333, 0 0 .9px #333, 0 0 .9px #333;
+        }
+    }
+
+    &__burger {
+        position: absolute;
+        right: 16px;
+        display: none;
+
+        @include ipad {
+            display: block;
+        }
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &__burger-menu {
+        width: 16px;
+        height: 1.5px;
+        background-color: var(--color-light-green);
+        box-shadow: 0px 4px var(--color-light-green),
+                    0px -4px var(--color-light-green);
+    }
+}

@@ -1,0 +1,113 @@
+.vitamins {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__header {
+        text-align: center;
+
+        @include ipad {
+            font-size: 32px;
+            word-wrap: break-word;
+            width: 455px;
+            line-height: 39px;
+        }
+
+        @include mobile {
+            font-size: 24px;
+            word-wrap: break-word;
+            width: 341px;
+            line-height: 29px;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 24px;
+        width: 100%;
+        word-wrap: break-word;
+        max-width: 965px;
+        line-height: 29px;
+        margin-top: 16px;
+
+        @include ipad {
+            font-size: 18px;
+            word-wrap: break-word;
+            max-width: 501px;
+            line-height: 22px;
+        }
+
+        @include mobile {
+            font-size: 16px;
+            word-wrap: break-word;
+            max-width: 364px;
+            line-height: 20px;
+        }
+    }
+
+    &__text-break {
+        @include ipad {
+            display: none;
+        }
+    }
+
+    &__items {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+
+        @include ipad {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 32px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 32px;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        max-width: 517px;
+        height: 526px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        background-color: var(--color-gray);
+        border: solid 1px var(--color-dark-gray);
+        border-radius: var(--border-radius);
+
+        @include mobile {
+            max-width: 382px;
+            height: 491px;
+        }
+    }
+
+    &__item-header {
+        margin-top: 8px;
+    }
+
+    &__item-text {
+        word-wrap: break-word;
+        width: 100%;
+        max-width: 386px;
+
+        @include mobile {
+            max-width: 354px;
+            line-height: 20px;
+        }
+    }
+
+    &__item-texts {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        padding: 0 24px;
+    }
+}

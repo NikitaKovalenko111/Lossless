@@ -1,0 +1,26 @@
+.discount-main {
+    &__container {
+        background-image: url(./../../../images/discount-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include ipad {
+            background-position-x: -200px;
+            background-position-y: 100px;
+
+            padding: 32px 0 56px 0;
+        }
+
+        @include mobile {
+            background: none;
+        }
+    }
+
+    &__header {
+        color: var(--color-dark-green);
+    }
+
+    &__desc {
+        color: var(--color-dark-green);
+    }
+}

@@ -1,0 +1,7 @@
+.section-main {
+    padding: 72px 0;
+
+    @include mobile {
+        padding: 52px 0;
+    }
+}

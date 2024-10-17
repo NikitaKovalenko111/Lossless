@@ -1,0 +1,113 @@
+.swiper {
+    position: relative;
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-slide {
+        background-color: var(--color-gray);
+        border: solid 1px var(--color-dark-gray);
+        border-radius: var(--border-radius);
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        max-width: 517px !important;
+        padding: 0 0 24px 0;
+        width: 100%;
+
+        @include mobile {
+            max-width: 382px;
+        }
+    }
+
+    &-button-prev {
+        -webkit-tap-highlight-color: transparent;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: -8px;
+            top: -154px;
+            z-index: 2;
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-image: url('./../../../images/arrow.svg') !important;
+        }
+
+        @include hover {
+            cursor: pointer;
+            
+            &::after {
+                background-image: url('./../../../images/arrow-green.svg') !important;
+                transform: rotate(180deg);
+            }
+        };
+
+        @include ipad {
+            display: none;
+        }
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &-button-next {
+        -webkit-tap-highlight-color: transparent;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -8px;
+            top: -154px;
+            z-index: 2;
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-image: url('./../../../images/arrow.svg') !important;
+            transform: rotate(180deg);
+        }
+
+        @include hover {
+            cursor: pointer;
+
+            &::after {
+                background-image: url('./../../../images/arrow-green.svg') !important;
+                transform: none;
+            }
+        };
+
+        @include ipad {
+            display: none;
+        }
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &-pagination {
+        margin: 40px 16px 0 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .swiper-pagination-bullet {
+            -webkit-tap-highlight-color: transparent;
+            width: 30px;
+            height: 30px;
+
+            background: none;
+            border: 2px solid var(--color-dark-green);
+            opacity: 100%;
+
+            &-active {
+                background-color: var(--color-dark-green);
+            }
+        }
+    }
+}

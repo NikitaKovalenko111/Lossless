@@ -1,0 +1,18 @@
+@import './../../fonts', 
+        './../../globals', 
+        './../../media', 
+        './../../mixins', 
+        './../../normalize', 
+        './../../utils', 
+        './../../variables';
+
+@import './../common/header',
+        './../common/footer',
+        './../common/button',
+        './../common/swiper',
+        './../common/mobile-menu';
+
+@import './section',
+        './intro',
+        './next',
+        './advice';

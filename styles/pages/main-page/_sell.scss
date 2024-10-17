@@ -1,0 +1,195 @@
+.sell {
+    border: 2px solid var(--color-light-green);
+    max-width: 1600px;
+    width: 100%;
+    padding: 32px 0 64px 0;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+    background-image: url('./../../../images/sell_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include ipad {
+        max-width: 738px;
+    }
+
+    @include mobile {
+        max-width: 379px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__discount-pic {
+        &--desktop {
+            display: none;
+
+            @include desktop-above {
+                display: block !important;
+            }
+        }
+
+        &--ipad-mobile {
+            display: none;
+
+            @include ipad {
+                display: block !important;
+            }
+
+            @include mobile {
+                width: 285px;
+                height: 163px;
+                display: block !important;
+            }
+        }
+    }
+
+    &__header {
+        color: var(--color-dark-green);
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 24px;
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &__form-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 68px;
+
+        @include ipad {
+            flex-direction: column;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form-input {
+        max-width: 382px;
+        height: 56px;
+        border-radius: var(--border-radius);
+        border: 0.5px solid var(--color-dark-green);
+        outline: none;
+        margin-bottom: 24px;
+        padding: 0 16px;
+        width: 100%;
+
+        @include mobile {
+            max-width: 363px;
+        }
+
+        &:focus {
+            border-color: var(--color-light-green);
+            border-width: 1px;
+        }
+    }
+
+    &__form-button {
+        max-width: 382px;
+        margin-top: 16px;
+    }
+
+    &__desc {
+        font-size: 24px;
+        color: var(--color-dark-green);
+        text-align: center;
+        word-wrap: break-word;
+        width: 546px;
+        line-height: 29px;
+        margin-bottom: 32px;
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 20px;
+            width: 291px;
+        }
+    }
+
+    &__discount {
+        display: flex;
+        gap: 24px;
+    }
+
+    &__discount-desc {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        align-items: center;
+    }
+
+    &__discount-name {
+        font-size: 24px;
+        color: var(--color-dark-green);
+        font-weight: 700;
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &__discount-old-price {
+        width: 216px;
+        position: relative;
+        text-align: center;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            width: 216px;
+            top: 50%;
+            height: 1px;
+            background-color: black;
+            display: block;
+        }
+    }
+
+    &__discount-timer {
+        font-size: 40px;
+        display: flex;
+        color: var(--color-dark-green)
+    }
+
+    &__discount-timer-hrs {
+        padding-right: 8px;
+    }
+
+    &__discount-timer-min {
+        padding: 0 16px;
+        border-right: 2px solid var(--color-dark-gray);
+        border-left: 2px solid var(--color-dark-gray);
+    }
+
+    &__discount-timer-sec {
+        padding-left: 8px;
+    }
+
+    &__discount-new-price {
+        color: var(--color-dark-green);
+        font-size: 18px;
+        font-weight: 700;
+        display: flex;
+        gap: 8px;
+
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+}

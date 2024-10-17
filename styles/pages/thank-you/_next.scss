@@ -1,0 +1,173 @@
+.next {
+    &__container {
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__header {
+        text-align: center;
+        margin-bottom: 56px;
+
+        &--ipad-mobile {
+            display: none;
+            font-size: 32px;
+            margin-bottom: 32px;
+            text-align: left;
+
+            @include ipad {
+                display: block;
+            }
+
+            @include mobile {
+                font-size: 24px;
+                text-align: center;
+                display: block;
+            }
+        }
+
+        &--desktop {
+            display: none;
+
+            @include desktop-above {
+                display: block;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 24px;
+
+        @include ipad {
+            gap: 16px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+
+        @include ipad {
+            row-gap: 32px;
+        }
+
+        @include mobile {
+            row-gap: 32px;
+        }
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        &::before {
+            font-size: 80px;
+            color: var(--color-dark-green);
+            font-weight: 700;
+            display: inline;
+        }
+
+        @include mobile {
+            align-items: flex-start;
+            
+            &::before {
+                font-size: 56px;
+            }
+        }
+
+        @include ipad {
+            align-items: flex-start;
+            gap: 24px;
+
+            &::before {
+                font-size: 56px;
+            }
+        }
+
+        &--01 {
+            &::before {
+                content: "01";
+            }
+        }
+
+        &--02 {
+            &::before {
+                content: "02";
+            }
+        }
+
+        &--03 {
+            &::before {
+                content: "03";
+            }
+        }
+    }
+
+    &__list-item-text {
+        word-wrap: break-word;
+        max-width: 431px;
+        width: 100%;
+        line-height: 20px;
+        margin-top: 8px;
+
+        @include ipad {
+            max-width: 288px;
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        @include mobile {
+            max-width: 288px;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+
+    &__pic-ipad {
+        display: none;
+
+        @include ipad {
+            display: block;
+        }
+    }
+
+    &__pic-not-ipad {
+        @include mobile {
+            border-radius: 30px;
+        }
+    }
+
+    &__pic {
+        @include mobile {
+            order: 0;
+        }
+    }
+
+    &__pic-not-ipad {
+        display: block;
+
+        @include ipad {
+            display: none;
+        }
+
+        @include mobile {
+            display: block;
+            width: 382px;
+            height: 268px;
+        }
+    }
+}

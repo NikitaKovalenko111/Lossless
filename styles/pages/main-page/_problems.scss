@@ -1,0 +1,125 @@
+.problems {
+    &__header {
+        text-align: center;
+
+        @include ipad {
+            font-size: 32px;
+        }
+
+        @include mobile {
+            padding: 0 21px;
+        }
+    }
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        @include mobile {
+            padding: 0 16px;
+        }
+    }
+
+    &__slide-image {
+        max-width: 517px;
+        width: 100%;
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 24px;
+        word-wrap: break-word;
+        align-self: center;
+        margin-top: 12px;
+
+        @include ipad {
+            width: 596px;
+            font-size: 18px;
+
+            .hidden-mobile {
+                display: none;
+            }
+        }
+
+        @include mobile {
+            padding: 0 21px;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 16px;
+        }
+    }
+
+    &__slide {
+        height: 526px;
+    }
+
+    &__slide-info {
+        padding: 0 24px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+
+        @include mobile {
+            padding: 0 9px 38px 24px;
+        }
+    }
+
+    &__slide-list-item {
+        text-align: left;
+        word-wrap: break-word;
+        max-width: 357px;
+        width: 100%;
+        line-height: 20px;
+
+        @include mobile {
+            max-width: 283px;
+        }
+    }
+
+    &__slide-list-item-wrapper {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+
+        &::before {
+            content: "";
+            width: 28px;
+            display: inline-block;
+            height: 28px;
+            background-image: url('./../../../images/leaf.svg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__slide-header {
+        font-size: 24px;
+        word-wrap: break-word;
+        line-height: 29px;
+
+        @include mobile {
+            font-size: 18px;
+            max-width: 244px;
+            line-height: 22px;
+        }
+    }
+
+    &__slide-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    &__items {
+        margin-top: 80px;
+
+        @include mobile {
+            margin-top: 48px;
+        }
+    }
+}

@@ -1,0 +1,146 @@
+.healthy-hair {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__main {
+        display: flex;
+        gap: 24px;
+        margin-top: 80px;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+            margin-top: 48px;
+        }
+
+        @include ipad {
+            margin-top: 56px;
+        }
+    }
+
+    &__reasons-item {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+
+        @include ipad {
+            align-items: start;
+            gap: 16px;
+        }
+
+        @include mobile {
+            align-items: start;
+            gap: 24px;
+        }
+    }
+
+    &__reasons-item-before {
+        color: var(--color-dark-green);
+        font-weight: 700;
+        font-size: 80px;
+
+        @include ipad {
+            font-size: 56px;
+        }
+
+        @include mobile {
+            font-size: 56px;
+        }
+    }
+
+    &__reasons-item-text {
+        word-wrap: break-word;
+        max-width: 461px;
+        width: 100%;
+        line-height: 20px;
+
+        @include ipad {
+            max-width: 287px;
+            line-height: 17px;
+            font-size: 14px;
+        }
+
+        @include mobile {
+            max-width: 287px;
+        }
+    }
+
+    &__reasons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+        @include ipad {
+            gap: 24px;
+        }
+    }
+
+    &__picture-wrapper {
+        overflow: hidden;
+        width: 100%;
+        max-width: 788px;
+        height: 551px;
+        position: relative;
+
+        @include ipad {
+            max-width: 361px;
+            height: 478px;
+        }
+
+        @include mobile {
+            max-width: 382px;
+            height: 264px;
+        }
+    }
+
+    &__pic {
+        width: 100%;
+        height: 100%;
+
+        @include ipad {
+            display: none;
+        }
+
+        @include mobile {
+            display: block;
+        }
+
+        &--ipad {
+            display: none;
+
+            @include ipad {
+                display: block;
+            }
+
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
+    &__reasons-item-main {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+    }
+
+    &__header {
+        text-align: center;
+        word-wrap: break-word;
+
+        @include mobile {
+            width: 303px;
+            line-height: 29px;
+        }
+
+        @include ipad {
+            font-size: 32px;
+            width: 404px;
+            line-height: 39px;
+        }
+    }
+}

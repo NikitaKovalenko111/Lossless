@@ -1,0 +1,120 @@
+.faq {
+    &__header {
+        text-align: center;
+        margin-bottom: 80px;
+        font-size: 48px;
+
+        @include ipad {
+            font-size: 32px;
+            margin-bottom: 56px;
+        }
+
+        @include mobile {
+            font-size: 24px;
+            margin-bottom: 48px;
+            margin-top: 54px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+        margin-bottom: 40px;
+    }
+
+    &__button {
+        display: none;
+        margin: 0 auto;
+
+        @include ipad {
+            display: block !important;
+        }
+
+        @include mobile {
+            display: block !important;
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding: 48px 48px 40px 32px;
+        background-color: var(--color-gray);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--color-dark-gray);
+
+        @include mobile {
+            padding: 24px 16px 32px 16px;
+        }
+    }
+
+    &__item-header {
+        margin-bottom: 14px;
+        font-size: 32px;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        word-wrap: break-word;
+
+        &:hover::after {
+            cursor: pointer;
+        }
+
+        @include ipad {
+            font-size: 18px;
+            margin-bottom: 11px;
+        }
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 16px;
+            width: 269px;
+        }
+    }
+
+    &__item-button {
+        display: inline-block;
+        width: 56px;
+        right: -10px;
+        position: absolute;
+        height: 56px;
+        background-size: cover;
+        background-position: center;
+
+        &--plus {
+            background-image: url('./../../../images/faq-plus.svg');
+        }
+
+        &--minus {
+            background-image: url('./../../../images/faq-minus.svg');
+        }
+
+        @include hover {
+            cursor: pointer;
+        }
+
+        @include ipad {
+            width: 32px;
+            height: 32px;
+        }
+
+        @include mobile {
+            width: 24px;
+            height: 24px;
+            right: -72px;
+        }
+    }
+
+    &__item-desc {
+        @include ipad {
+            font-size: 16px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+}

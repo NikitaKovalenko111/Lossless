@@ -1,0 +1,48 @@
+.button {
+    @include reset-button;
+
+    background-color: var(--color-dark-green);
+    max-width: 299px;
+    width: 100%;
+    height: 72px;
+    font-weight: 700;
+    color: white;
+    border-radius: var(--border-radius);
+
+    @include hover {
+        cursor: pointer;
+        animation: hover-animation .2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    };
+
+    &:not(:hover) {
+        animation: hover-animation-back .2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes hover-animation {
+    50% {
+        background-color: var(--color-normal-green);
+    }
+
+    100% {
+        background-color: var(--color-light-green);
+    }
+}
+
+@keyframes hover-animation-back {
+    0% {
+        background-color: var(--color-light-green);
+    }
+
+    50% {
+        background-color: var(--color-normal-green);
+    }
+
+    100% {
+        background-color: var(--color-dark-green);
+    }
+}

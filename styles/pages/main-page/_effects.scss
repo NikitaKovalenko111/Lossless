@@ -1,0 +1,60 @@
+.effects {
+    &__button-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    &__header {
+        text-align: center;
+        margin-bottom: 80px;
+        word-wrap: break-word;
+
+        @include ipad {
+            font-size: 32px;
+            width: 414px;
+        }
+
+        @include mobile {
+            font-size: 24px;
+            width: 311px;
+        }
+    }
+
+    &__header-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        height: 614px;
+    }
+
+    &__slide-text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    &__slide-text {
+        padding: 0 24px;
+    }
+
+    &__person {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__person-status {
+        color: var(--color-dark-green);
+        font-weight: 700;
+    }
+
+    &__desc {
+        line-height: 150%;
+    }
+}

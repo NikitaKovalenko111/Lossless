@@ -1,0 +1,28 @@
+@import './../../fonts', 
+        './../../globals', 
+        './../../media', 
+        './../../mixins', 
+        './../../normalize', 
+        './../../utils', 
+        './../../variables';
+
+@import './../common/header',
+        './../common/footer',
+        './../common/button',
+        './../common/swiper',
+        './../common/mobile-menu',
+        './../common/discount';
+
+@import './section-main',
+        './problems',
+        './intro',
+        './advantages',
+        './discount-main',
+        './vitamins',
+        './healthy-hair',
+        './effects',
+        './comparation',
+        './months',
+        './time-to-move',
+        './sell',
+        './faq';

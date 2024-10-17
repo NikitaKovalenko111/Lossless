@@ -1,0 +1,140 @@
+.time-to-move {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__header {
+        text-align: center;
+        margin-bottom: 80px;
+
+        @include ipad {
+            font-size: 32px;
+            line-height: 39px;
+            width: 407px;
+        }
+
+        @include mobile {
+            margin-bottom: 48px;
+            width: 305px;
+            line-height: 29px;
+            font-size: 24px;
+        }
+    }
+
+    &__main-pic {
+        &--desktop-mobile {
+            display: none;
+
+            @include desktop-above {
+                display: block !important;
+            }
+
+            @include mobile {
+                width: 382px;
+                height: 267px;
+                display: block !important;
+            }
+        }
+
+        &--ipad {
+            display: none;
+
+            @include mobile-above {
+                display: block;
+            }
+
+            @include desktop-above {
+                display: none !important;
+            }
+
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
+    &__main-pic-wrapper {
+        @include mobile {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__main {
+        display: flex;
+        gap: 24px;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__main-items {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    &__main-item {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        @include ipad {
+            flex-direction: column;
+            text-align: center;
+            gap: 24px;
+            font-size: 18px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            text-align: center;
+            gap: 24px;
+            font-size: 18px;
+        }
+
+        &::before {
+            content: "";
+            width: 80px;
+            height: 80px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: block;
+
+            @include ipad {
+                width: 56px;
+                height: 56px;
+            }
+        }
+
+        &--1 {
+            &::before {
+                background-image: url('./../../../images/opadanja.svg');
+            }
+        }
+
+        &--2 {
+            &::before {
+                background-image: url('./../../../images/stimulacija.svg');
+            }
+        }
+
+        &--3 {
+            &::before {
+                background-image: url('./../../../images/uklanja.svg');
+            }
+        }
+
+        &--4 {
+            &::before {
+                background-image: url('./../../../images/kose.svg');
+            }
+        }
+    }
+}
